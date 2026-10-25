@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #111713;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code,
+  kbd,
+  samp,
+  pre,
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* 2026 Enterprise Light Theme & Subtle 3D Depth Tokens */
+.card-depth-subtle {
+  background-color: #FFFFFF;
+  border: 1px solid #E2EAE3;
+  box-shadow: 0 1px 3px rgba(17, 23, 19, 0.04), 0 4px 12px rgba(17, 23, 19, 0.02);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.theme-dark .card-depth-subtle {
+  background-color: #121820;
+  border: 1px solid #223042;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.card-depth-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(19, 132, 67, 0.08), 0 12px 24px -4px rgba(17, 23, 19, 0.04);
+  border-color: #CBD5CD;
+}
+
+.theme-dark .card-depth-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(78, 222, 163, 0.15);
+  border-color: #4EDE78;
+}
+
+/* Soft Light-Green Surface Card */
+.surface-light-green {
+  background-color: #EAF8EE;
+  border: 1px solid #D5EBD9;
+}
+
+.surface-light-green-alt {
+  background-color: #F2FBF4;
+  border: 1px solid #E2EAE3;
+}
+
+.theme-dark .surface-light-green {
+  background-color: #132219;
+  border: 1px solid #1E3827;
+}
+
+.theme-dark .surface-light-green-alt {
+  background-color: #0E1A13;
+  border: 1px solid #162B1F;
+}
+
+/* Primary Green Action Button */
+.btn-primary-green {
+  background-color: #138443;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary-green:hover {
+  background-color: #0D6332;
+}
+
+.btn-primary-green:active {
+  transform: translateY(1px);
+}
+
+/* Secondary Action Button */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #111713;
+  border: 1px solid #E2EAE3;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+  background-color: #F7FAF7;
+  border-color: #CBD5CD;
+}
+
+.theme-dark .btn-secondary {
+  background-color: #182230;
+  color: #E0E2EA;
+  border: 1px solid #223042;
+}
+
+.theme-dark .btn-secondary:hover {
+  background-color: #1E2B3D;
+  border-color: #4EDE78;
+}
+
+/* Inset surface highlight for subtle bezel effect */
+.surface-bevel {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 1px 2px rgba(17, 23, 19, 0.03);
+}
+
+.theme-dark .surface-bevel {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Crisp scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FAF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5CD;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A7B6AA;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+  background: #0b0f14;
+}
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: #223042;
+}
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  background: #33445c;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}

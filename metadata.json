@@ -1,0 +1,6 @@
+{
+  "name": "GhostTrace AI - Forensic Data Governance",
+  "description": "Enterprise-grade forensic data governance and immutable erasure verification platform for GDPR, CCPA, and statutory compliance auditing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
